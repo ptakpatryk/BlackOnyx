@@ -1,2 +1,10 @@
 import '../sass/styles.scss';
-console.log('hi');
+
+
+let test = () => {
+    console.log('Patryk');
+};
+
+
+
+test();

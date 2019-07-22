@@ -1,6 +1,7 @@
 // Webpack uses this to work with directories
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -8,7 +9,7 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'js/bundle.js'
   },
   // Adding Loaders
   module: {
@@ -27,7 +28,8 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            // loader: MiniCssExtractPlugin.loader
+            loader: 'style-loader'
           },
           {
             loader: 'css-loader'
@@ -64,15 +66,30 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        
       }
 
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'bundle.css'
+      filename: '/css/bundle.css'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.html'
     })
   ],
+  // devServer: {
+  //   inline: true,
+  //   open: true
+  // },
+  devServer: {
+    contentBase: './dist'
+  },
+  
   // Default mode for Webpack is production.
   // Depending on mode Webpack will apply different things
   // on final bundle. For now we don't need production's JavaScript
