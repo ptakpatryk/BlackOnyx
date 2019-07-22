@@ -8,16 +8,14 @@ html, * {
   padding: 0;
   box-sizing: border-box;
   font-family: Lato, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   width: 100vw;
   overflow: hidden;
 
-}
-
-h1 {
-  color: coral ;
 }
 
 nav {
@@ -63,4 +61,50 @@ nav {
   right: -170px;
   z-index: -1;
   width: 1200px;
+}
+
+main {
+  width: 85vw;
+  margin: 10rem auto 0;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .header-info {
+
+    margin-left: 3rem;
+
+
+    h1 {
+      font-size: $large;
+      font-weight: 900;
+      color: $black;
+    }
+
+    h3 {
+      font-size: $big;
+      font-weight: 700;
+      color: $black;
+      margin: $m-big 0;
+    }
+
+    p {
+      font-size: $normal;
+    }
+  }
+}
+
+section {
+  background: $coral;
+  margin-top: 5rem;
+  .info {
+    width: 85vw;
+    margin: 0 auto;
+  }
 }
