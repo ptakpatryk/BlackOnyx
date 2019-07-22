@@ -1,9 +1,19 @@
 @import './bg';
+@import './assets';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+
 
 html, * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+
 }
 
 h1 {
@@ -11,26 +21,46 @@ h1 {
 }
 
 nav {
-  width: 100vw;
-  height: 100px;
+  width: 85vw;
+  margin: 3rem auto;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
 
-  
-  .wrapper {
-    width: 80vw;
-    position: relative;
-    margin: 0 auto;
+    .logo {
+      width: 300px;
+      margin-right: auto;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      font-size: 1.25rem;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: .1rem .5rem;
+        border-radius: 3px;
+      }
+
+      li {
+        margin: .2rem  1rem;
+
+        :hover {
+          background: #fff;
+          color: $coral;
+          border-radius: 3px;
+        }
+      }
+    }
   }
 
-  .logo {
-    width: 20%;
-  }
-}
 
 #bg-top {
   position: absolute;
   top: -5px;
-  right: -30px;
+  right: -170px;
   z-index: -1;
-  width: 60%;
+  width: 1200px;
 }
