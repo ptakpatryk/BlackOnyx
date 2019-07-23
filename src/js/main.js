@@ -9,3 +9,10 @@ TweenMax.to('#coral-line', 2.5 , {
     yoyo: true,
     ease: Sine.easeInOut
 });
+
+TweenMax.to('#Path_34', 1, {
+    css:{scale:0.9, rotation: 15, transformOrigin: '50% 50%'},
+    repeat: -1,
+    yoyo: true,
+    ease: Sine.easeInOut
+})
