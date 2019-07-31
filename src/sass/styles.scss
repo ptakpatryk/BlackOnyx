@@ -45,10 +45,17 @@ nav {
   display: flex;
   align-items: flex-start;
 
-    ul {
+    .hamburger {
+      display: none;
+    }
+
+    .menu {
       display: flex;
       list-style-type: none;
 
+      .close {
+        display: none;
+      }
 
       a {
         text-decoration: none;
@@ -91,7 +98,7 @@ header {
     width: 70%;
 
     h1 {
-      font-size: $large;
+      font-size: calc((45vw - 5.5rem) / 7);
       font-weight: 900;
       color: $black;
     }

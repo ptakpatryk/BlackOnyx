@@ -16,3 +16,19 @@ import { TweenMax, Sine } from 'gsap';
 //     yoyo: true,
 //     ease: Sine.easeInOut
 // })
+
+
+// MENU TOGGLE
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+const closeMenu = document.querySelector('.close');
+
+
+[hamburger, closeMenu].forEach(el => {
+    el.addEventListener('click', toggleMenuClass);
+})
+
+function toggleMenuClass() {
+    menu.classList.toggle('menu--active');
+}
