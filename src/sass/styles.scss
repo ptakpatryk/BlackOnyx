@@ -15,6 +15,11 @@ html, * {
   // outline: 1px solid red;
 }
 
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 #logo {
   width: 20vw;
   margin-right: auto;
@@ -26,22 +31,16 @@ html, * {
   justify-content: flex-end;
   top: 0;
   right: 0;
-  width: 70vw;
-  max-width: 1200px;
-  overflow: hidden;
+  width: 70%;
+  max-width: 850px;
   z-index: -1;
 
-  #bg-top {
-    margin: -3px -4% 0 auto;
-    z-index: -1;
-    width: 100%;
-  }
 }
 
 nav {
-  width: 85vw;
-  max-width: 1920px;
-  margin: 2.5rem auto;
+  width: 90vw;
+  max-width: 1500px;
+  margin: 2% auto;
   display: flex;
   align-items: flex-start;
 
@@ -66,9 +65,10 @@ nav {
 
       li {
         margin: .2rem  1rem;
-        
+
         a {
-          font-size: 1.25rem;
+          font-size: 1.25em;
+          // font-size: calc(.4rem - (-1vw));
         }
 
         :hover {
@@ -82,7 +82,8 @@ nav {
 
 main {
   width: 85vw;
-  margin: 10rem auto 5rem;
+  // margin: 10rem auto 5rem;
+  margin: 12vw auto 5rem;
 }
 
 header {
@@ -98,7 +99,7 @@ header {
     width: 70%;
 
     h1 {
-      font-size: calc((45vw - 5.5rem) / 7);
+      font-size: calc((45vw - 1rem) / 5);
       font-weight: 900;
       color: $black;
     }
@@ -142,6 +143,7 @@ header {
 
       .info {
         margin-left: 3rem;
+        z-index: 2;
       }
     }
 
@@ -150,7 +152,7 @@ header {
       flex: 1 3 auto;
 
       h2 {
-        font-size: $large;
+        font-size: calc((45vw - 1rem) / 5);
         font-weight: 900;
       }
 
@@ -213,6 +215,14 @@ header {
 */
 
 footer {
+
+  .svg-contact {
+    z-index: 1;
+    position: absolute;
+    left: -500px;
+    bottom: 215px;
+}
+
   position: relative;
   height: 250px;
   width: 100%;
