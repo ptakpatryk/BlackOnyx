@@ -68,7 +68,7 @@ module.exports = {
         ]
       },
       {
-        
+
       }
 
     ]
@@ -80,6 +80,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'offer.html',
+      template: './src/offer.html'
     })
   ],
   // devServer: {
@@ -89,7 +93,7 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
-  
+
   // Default mode for Webpack is production.
   // Depending on mode Webpack will apply different things
   // on final bundle. For now we don't need production's JavaScript

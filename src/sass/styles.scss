@@ -43,6 +43,7 @@ nav {
   margin: 2% auto;
   display: flex;
   align-items: flex-start;
+  z-index: 1;
 
     .hamburger {
       display: none;
@@ -130,6 +131,11 @@ header {
     background: #fff;
     color: $black;
   }
+
+  &-white:first-of-type {
+    background: none;
+  }
+
 
   .wrapper {
     width: 85vw;
