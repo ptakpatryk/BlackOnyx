@@ -3,13 +3,17 @@
 ===============*/
 
 @media (max-width: 1049px) {
-  nav .menu li {
-    margin: 0.2rem 0.8rem;
-    a {
-      font-size: 1.1em;
+  nav {
+    margin: 2% auto;
+    .menu li {
+      margin: 0.2rem 0.8rem;
+      a {
+        font-size: 1.1em;
+      }
     }
+  } 
   }
-}
+  
 
 @media (max-width: 839px) {
   nav .menu li {
@@ -45,9 +49,16 @@
         margin: 3rem;
       }
 
-      .header-info h3 {
-        margin: 0.8rem auto;
-      }
+      .header-info {
+        h3, p {
+          max-width: unset;
+        }
+
+        h3 {
+          margin: 0.8rem auto;
+        }
+      } 
+      
     }
   }
 
@@ -77,6 +88,14 @@
         h3 {
           margin: 0.8rem auto;
         }
+      }
+    }
+  }
+
+  .contact {
+    .wrapper {
+      p {
+        width: 100%;
       }
     }
   }
