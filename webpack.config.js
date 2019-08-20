@@ -1,15 +1,15 @@
 // Webpack uses this to work with directories
-const path = require('path');
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
 module.exports = {
-  entry: './src/js/main.js',
+  entry: "./src/js/main.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "js/bundle.js"
   },
   // Adding Loaders
   module: {
@@ -18,9 +18,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
+            presets: ["@babel/preset-env"]
           }
         }
       },
@@ -29,18 +29,18 @@ module.exports = {
         use: [
           {
             // loader: MiniCssExtractPlugin.loader
-            loader: 'style-loader'
+            loader: "style-loader"
           },
           {
-            loader: 'css-loader'
+            loader: "css-loader"
           },
           {
-            loader: 'postcss-loader'
+            loader: "postcss-loader"
           },
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
-              implementation: require('sass')
+              implementation: require("sass")
             }
           }
         ]
@@ -51,7 +51,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              outputPath: 'fonts'
+              outputPath: "fonts"
             }
           }
         ]
@@ -62,28 +62,33 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              outputPath: 'fonts'
+              outputPath: "fonts"
             }
           }
         ]
       },
-      {
-
-      }
-
+      {}
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '/css/bundle.css'
+      filename: "/css/bundle.css"
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './src/index.html'
+      filename: "index.html",
+      template: "./src/index.html"
     }),
     new HtmlWebpackPlugin({
-      filename: 'offer.html',
-      template: './src/offer.html'
+      filename: "offer.html",
+      template: "./src/offer.html"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "portfolio.html",
+      template: "./src/portfolio.html"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      template: "./src/contact.html"
     })
   ],
   // devServer: {
@@ -91,12 +96,12 @@ module.exports = {
   //   open: true
   // },
   devServer: {
-    contentBase: './dist'
+    contentBase: "./dist"
   },
 
   // Default mode for Webpack is production.
   // Depending on mode Webpack will apply different things
   // on final bundle. For now we don't need production's JavaScript
   // minifying and other thing so let's set mode to development
-  mode: 'development'
+  mode: "development"
 };
