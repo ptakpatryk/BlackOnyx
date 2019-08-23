@@ -13,9 +13,17 @@ html,
   // outline: 1px solid red;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
   width: 100vw;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 #logo {
@@ -189,9 +197,9 @@ header {
 
 .contact {
   text-align: right;
-  height: 600px;
+  min-height: 600px;
   display: flex;
-  justify-content: flex;
+  justify-content: flex-end;
 
     p {
       width: 50%;
@@ -268,41 +276,52 @@ header {
     margin: $m-big 0 0.3em 0 !important;
   }
 }
+/************************
+============
+GALLERY 
+=========
 
-// Belowed code let content verticaly center
-.center-vertical {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 55vh;
+*/ 
+
+.gallery {
+  .gallery-item {
+    max-width: 250px;
+    max-height: 250px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: red;
+      left: 5%;
+      right: 5%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }
-
-.center-horizontal {
-  display: flex;
-  
-}
-
 
 /****************
 * FOOTER
 */
-.stick-bottom {
-  position: absolute;
-  bottom: 0;
-}
 
 footer {
+
+  margin-top: auto;
+  position: relative;
+  // height: 250px;
+  padding-top: 55px;
+  // width: 100%;
+  background: $coral;
+
   .svg-contact {
     z-index: 1;
     position: absolute;
     left: -500px;
     bottom: 215px;
   }
-
-  position: relative;
-  height: 250px;
-  width: 100%;
-  background: $coral;
 
   .wrapper {
     width: 85vw;

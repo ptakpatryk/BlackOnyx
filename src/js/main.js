@@ -1,4 +1,5 @@
 import '../sass/styles.scss';
+// import fslightbox from 'fslightbox';
 import { TweenMax, Sine } from 'gsap';
 
 const menuAnimation = TweenMax.to('#coral-line', 2 , {
