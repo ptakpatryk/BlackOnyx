@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 716 529.09">
+  <title>main--woman</title>
+  <g class="svg--main__bg">
+    <path class="svg--main__bg__rect" d="M365.49,10.14,172.22,114.83a49.16,49.16,0,0,1-85,49.4c-.5-.85-1-1.71-1.41-2.59l-65.9,35.7L190.59,512.5l345.6-187.2Z" fill="#f4f4f4"/>
+    <circle class="svg--main__bg__circle" cx="126.77" cy="139.52" r="39.9" fill="#ff6f61"/>
+  </g>
+  <g class="svg--main__items">
+    <rect class="svg--main__items__rect" x="128.55" y="280.83" width="36.72" height="36.72" transform="translate(-180.05 363.93) rotate(-75.05)" fill="#ff6f61" opacity="0.2" style="isolation: isolate"/>
+    <circle class="svg--main__items__circle__coral" cx="24.58" cy="448.85" r="4.8" fill="#ff6584"/>
+    <line class="svg--main__items__floor__two" x1="119.74" y1="527.65" x2="320.28" y2="527.65" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <line class="svg--main__items__floor__one" y1="527.65" x2="94.76" y2="527.65" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <circle class="svg--main__items__circle__filled__one" cx="203.3" cy="314.17" r="14.9" fill="#3f3d56"/>
+    <circle class="svg--main__items__circle__outline__four" cx="156.56" cy="314.17" r="10.84" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <circle class="svg--main__items__circle__outline__three" cx="250.04" cy="314.17" r="10.84" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <circle class="svg--main__items__circle__outline__two" cx="363.34" cy="11.84" r="10.84" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <circle class="svg--main__items__circle__outline__one" cx="240.13" cy="79.42" r="10.84" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+  <g class="svg--main__flower">
+    <line class="svg--main__flower__item" x1="48.1" y1="528.53" x2="48.1" y2="473.87" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <circle class="svg--main__flower__item-2" data-name="svg--main__flower__item" cx="48.1" cy="473.87" r="7.73" fill="#3f3d56"/>
+    <path class="svg--main__flower__item-3" data-name="svg--main__flower__item" d="M48.1,507.56s-1.1-23.75-23.74-21" fill="#3f3d56"/>
+  </g>
+  <g class="svg--main--plant">
+    <path class="svg--main--plant__dark" d="M218.87,429c-28.36,43.5-20.59,98.83-20.59,98.83s53.76-15.2,82.13-58.7S301,370.28,301,370.28,247.24,385.49,218.87,429Z" fill="#3f3d56"/>
+    <path class="svg--main--plant__coral__back" d="M198.13,527.31s-.69-.11-2-.37c-1-.21-2.41-.5-4.12-.9-15.23-3.59-55.74-15.73-82.22-47.66-33.15-40-31.75-95.83-31.75-95.83s50.68,8.24,84.08,44.14q2.16,2.31,4.22,4.8c28.84,34.78,31.53,81.58,31.74,93.15C198.15,526.37,198.13,527.31,198.13,527.31Z" fill="#ff6f61"/>
+    <path class="svg--main--plant__outline" d="M177.69,429c28.36,43.5,20.59,98.83,20.59,98.83s-53.76-15.2-82.13-58.7-20.59-98.83-20.59-98.83S149.32,385.49,177.69,429Z" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <path class="svg--main--plant__shadow" d="M198.12,524.63c-.75.9-1.41,1.68-2,2.31-1.2,1.37-1.89,2.09-1.89,2.09s-.83-1-2.23-3c-7.66-10.68-32.3-48.66-30.4-92.53q.15-3.45.5-6.82,2.17,2.31,4.23,4.8C195.22,466.26,197.91,513.06,198.12,524.63Z" opacity="0.1" style="isolation: isolate"/>
+    <path class="svg--main--plant__coral__front" d="M240.18,436.68C237.94,488.56,199.42,529,199.42,529s-34.87-43.64-32.63-95.52,40.75-92.35,40.75-92.35S242.42,384.8,240.18,436.68Z" fill="#ff6f61"/>
+    <line class="svg--main--plant__coral__front-2" data-name="svg--main--plant__coral__front" x1="199.42" y1="527.57" x2="207.89" y2="343.27" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+  <g class="svg--main__woman">
+    <circle class="svg--main__woman__item" cx="671.61" cy="199.9" r="14.9" fill="#3f3d56"/>
+    <circle class="svg--main__woman__item-2" data-name="svg--main__woman__item" cx="481.15" cy="95.12" r="35.09" fill="#ff6584"/>
+    <path class="svg--main__woman__item-3" data-name="svg--main__woman__item" d="M561.91,405.16l18.76,75.61,18.75-3-18.75-86.51Z" fill="#fbbebe"/>
+    <path class="svg--main__woman__item-4" data-name="svg--main__woman__item" d="M587.32,475.93s-10.68,3.62-9.27,6,1.41,17.56-3.44,23-16.93,22.39-3,23,27.83-8.47,27.83-8.47V503.76l2.42,14.52h2.42V502s6-10.29,2.42-16.34-6-11.32-10.56-10.8S587.32,475.93,587.32,475.93Z" fill="#2f2e41"/>
+    <path class="svg--main__woman__item-5" data-name="svg--main__woman__item" d="M488.11,469.28l-3,16.33h21.18V469.28Z" fill="#fbbebe"/>
+    <path class="svg--main__woman__item-6" data-name="svg--main__woman__item" d="M489.92,482s-6.05-.59-7.86,7.87-18.15,26.44-24.2,28.26-6.05,7.86,1.81,9.07,27.83,1.82,32.67-4.84S503.84,505,503.84,505l-3,22.82h5.44s4.84-22.21,9.68-27.66S506.25,482,503.83,482Z" fill="#2f2e41"/>
+    <path class="svg--main__woman__item-7" data-name="svg--main__woman__item" d="M460.28,221.86s-4.24,11.49-11.5,13.31-61.1,14.52-61.1,14.52S340.5,250.9,355,261.18s38.11,0,38.11,0,69-8.47,74.41-17.54a122.3,122.3,0,0,0,9.07-19.36Z" fill="#fbbebe"/>
+    <path class="svg--main__woman__item-8" data-name="svg--main__woman__item" d="M483.27,171S448.79,227.3,453,228.51s43.56,13.92,45.37,9.08,1.82-27.22,1.82-27.22Z" fill="#2f2e41"/>
+    <path class="svg--main__woman__item-9" data-name="svg--main__woman__item" d="M483.27,171S448.79,227.3,453,228.51s43.56,13.92,45.37,9.08,1.82-27.22,1.82-27.22Z" opacity="0.1" style="isolation: isolate"/>
+    <path class="svg--main__woman__item-10" data-name="svg--main__woman__item" d="M572.8,157.74l78,39.92s44.16,11.5,34.48,20.57-41.14-7.86-41.14-7.86L557.68,171Z" fill="#fbbebe"/>
+    <path class="svg--main__woman__item-11" data-name="svg--main__woman__item" d="M473,126.28s15.12,23,13.91,28.43c0,0,1.21,3.63-.6,6s-1.21,16.94-1.21,16.94l6.05,8.47,7.86-26,3.63-27.83s-8.17-11.19-7-16.64S473,126.28,473,126.28Z" fill="#fbbebe"/>
+    <path class="svg--main__woman__item-12" data-name="svg--main__woman__item" d="M520.78,257S486.9,347.69,486.9,387.61s-12.7,85.3-3,89.54,58.67,4.84,59.88,0-6-201.45-9.68-209.31S520.78,257,520.78,257Z" fill="#2f2e41"/>
+    <path class="svg--main__woman__item-13" data-name="svg--main__woman__item" d="M520.78,257S486.9,347.69,486.9,387.61c0,14.06-3.23,42.46-3.23,42.46s-6.07,44.33.2,47.08c9.68,4.23,58.68,4.84,59.89,0s-6-201.45-9.68-209.31S520.78,257,520.78,257Z" opacity="0.1" style="isolation: isolate"/>
+    <circle class="svg--main__woman__item-14" data-name="svg--main__woman__item" cx="480.85" cy="107.53" r="22.38" fill="#fbbebe"/>
+    <path class="svg--main__woman__item-15" data-name="svg--main__woman__item" d="M487.5,175.28l-1.62-13.65s-5,7-5,12.44-3,24.8,9.68,36.9,15.12,14.52,15.73,16.94,3.63,2.42,3.63,2.42l17.54,70.78s5.44,188.13,13.91,190.55,34.49,0,36.3-3-3-83.48-3-83.48,13.31,71.38,18.15,71.38,7.86-10.29,6.65-10.89S591,418.46,587.93,404s-1.82-137.32-1.82-137.32,9.68-15.73-23.59-46.58c0,0-21.18-61.7-22.39-61.7s-24.8-33.27-24.8-33.27-13.3,0-15.72,7.86S487.5,175.28,487.5,175.28Z" fill="#2f2e41"/>
+    <path class="svg--main__woman__item-16" data-name="svg--main__woman__item" d="M508.07,129.91l7.26-4.84s30.25,18.15,51.42,19.36,20.57,13.31,12.1,21.78-41.74,37.5-43,30.24S508.07,129.91,508.07,129.91Z" fill="#2f2e41"/>
+    <ellipse class="svg--main__woman__item-17" data-name="svg--main__woman__item" cx="481.15" cy="85.45" rx="24.2" ry="14.52" fill="#ff6584"/>
+    <circle class="svg--main__woman__item-18" data-name="svg--main__woman__item" cx="483.57" cy="60.04" r="14.52" fill="#ff6584"/>
+    <path class="svg--main__woman__hair" d="M464.22,52.17a14.52,14.52,0,0,1,13-14.44c-.5,0-1-.07-1.51-.07a14.52,14.52,0,1,0-.24,29h.24a12.62,12.62,0,0,0,1.51-.08A14.51,14.51,0,0,1,464.22,52.17Z" fill="#ff6584"/>
+    <line class="svg--main__woman__item-19" data-name="svg--main__woman__item" x1="363.99" y1="527.98" x2="651.96" y2="527.98" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <path class="svg--main__woman__check" d="M707,126.5l-34.87,34.88-14.66-14.66a5,5,0,0,0-7.09,0h0a5,5,0,0,0,0,7.09h0l19,19a3.83,3.83,0,0,0,5.41,0l39.28-39.24a5,5,0,0,0,0-7.09h0A5,5,0,0,0,707,126.5Z" fill="#ff6f61"/>
+  </g>
+</svg>
