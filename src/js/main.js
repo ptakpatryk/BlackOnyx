@@ -41,7 +41,15 @@ function toggleMenuClass() {
 
 // Animation functions
 
-svgMain();
+const svgMainAnim = svgMain();
+
+svgMainAnim.play();
+
+
+
+console.log(svgMainAnim);
+
+
 
 // // Poligrafia intersection observer
 
