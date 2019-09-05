@@ -1,5 +1,5 @@
 import '../sass/styles.scss';
-import { svgMain, svgTeam, svgContact, svgOffer, svgProject } from './svg-animation';
+import { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat } from './svg-animation';
 // import fslightbox from 'fslightbox';
 import TweenMax from 'gsap';
 
@@ -46,12 +46,14 @@ const svgTeamAnim = svgTeam();
 const svgContactAnim = svgContact();
 const svgOfferAnim = svgOffer();
 const svgProjectAnim = svgProject();
+const svgFormatAnim = svgFormat();
 
 svgMainAnim.play();
 svgTeamAnim.play();
 svgContactAnim.play();
 svgOfferAnim.play();
 svgProjectAnim.play();
+svgFormatAnim.play();
 
 
 

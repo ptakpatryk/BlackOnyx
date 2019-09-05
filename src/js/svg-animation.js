@@ -170,8 +170,12 @@ function svgProject() {
     const chatOne = new TimelineMax({});
     const chatTwo = new TimelineMax({});
     const chatThree = new TimelineMax({});
-    const chatTMaster = new TimelineMax({ repeat: -1 });
+    const chatMaster = new TimelineMax({ repeat: -1 });
+    const palette = new TimelineMax({ repeat: -1 });
     
+    const paletteColors = Array.from(document.querySelectorAll('.svg--project--palette__color'));
+    const palleteStuff = [...paletteColors, document.getElementById('svg--project--palette--main') ]
+
     chatOne
         .from('#svg--project--chat--one__avatar', .75, { scale: 0, transformOrigin: "50% 50%", ease: Sine.easeOut}, 'chat')
         .from('#svg--project--chat--one__line--one', .75, { scaleX: 0, transformOrigin: "0% 50%", ease: Sine.easeOut} , 'chat' + '+=.35')
@@ -187,7 +191,7 @@ function svgProject() {
         .from('#svg--project--chat--three__line--one', .75, { scaleX: 0, transformOrigin: "0% 50%", ease: Sine.easeOut} , 'chat' + '+=.35')
         .from('#svg--project--chat--three__line--two', .75, { scaleX: 0, transformOrigin: "0% 50%", ease: Sine.easeOut} , 'chat' + '+=.35');
 
-    chatTMaster
+    chatMaster
         .add(chatOne, 'chatMaster')
         .add(chatTwo, 'chatMaster' + '+=.35')
         .add(chatThree, 'chatMaster' + '+=.65')
@@ -195,11 +199,58 @@ function svgProject() {
         .to('#svg--project--chat--two', .45, { y: -15, opacity: 0, ease: Sine.easeIn}, 'chatGone' + '+=.2')
         .to('#svg--project--chat--three', .45, { y: -15, opacity: 0, ease: Sine.easeIn}, 'chatGone' + '+=.4');
 
+        palette
+        .from('#svg--project--palette--main', 2, { scale: 0, rotation: 360, ease: Sine.easeOut, transformOrigin: "50% 50%"}, 'palette')
+        .staggerFrom(paletteColors, .5, { y: 10, opacity: 0, delay: .75, ease: Sine.easeOut}, .25, 'palette')
+        .staggerTo(palleteStuff, .75, { y: -10, opacity: 0, ease: Sine.easeIn});
+
+    
+    
     svgMasterTml
-        .add(chatMaster, 'masterTime');
+        .add(chatMaster, 'masterTime')
+        .add(palette, 'masterTime')
+        .to('#svg--project--bgcircle--one', 5.5, { rotation: 360, transformOrigin: "53% 50%", ease: Sine.easeInOut, repeat: -1 }, 'masterTime')
+        .to('#svg--project--bgcircle--two', 4.5, { rotation: -360, transformOrigin: "47% 50%", ease: Sine.easeInOut, repeat: -1 }, 'masterTime')
+        .to('#svg--project__tree--one', 2, { rotation: 10, transformOrigin: "50% 100%", ease: Sine.easeInOut, repeat: -1, yoyo: true}, 'masterTime')
+        .to('#svg--project__tree--two', 2.5, { rotation: -13, transformOrigin: "50% 100%", ease: Sine.easeInOut, repeat: -1, yoyo: true}, 'masterTime');
+
+    svgMasterTml.timeScale(.8);
 
     return svgMasterTml
 };
 
+function svgFormat() {
 
-export { svgMain, svgTeam, svgContact, svgOffer, svgProject };
+    const svgMasterTml = new TimelineMax({ paused: true });
+    const circles = new TimelineMax({});
+    const rings = new TimelineMax({ repeat: -1 });
+
+    const ringsStack = Array.from(document.querySelectorAll('.svg--format--ring'));
+
+    circles
+        .to('#svg--format--circle--one', 4, { rotation: 360, transformOrigin: "50% 70%", ease: Linear.easeNone, repeat: -1 }, 'circle')
+        .to('#svg--format--circle--two', 9.5, { rotation: 360, transformOrigin: "80% 140%", ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'circle')
+        .to('#svg--format--circle--three', 5, { rotation: 360, transformOrigin: "30% 100%", ease: Linear.easeNone, repeat: -1 }, 'circle')
+        .to('#svg--format--circle--four', 4, { rotation: -180, transformOrigin: "50% 70%", ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'circle')
+        .to('#svg--format--circle--five', 8, { rotation: -360, transformOrigin: "150% 150%", ease: Linear.easeNone, repeat: -1 }, 'circle')
+        .to('#svg--format--circle--six', 9, { rotation: 360, transformOrigin: "200% 50%", ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'circle')
+        .to('#svg--format--circle--seven', 7, { rotation: 300, transformOrigin: "50% 170%", ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'circle')
+        .to('#svg--format--circle--eight', 14, { rotation: -360, transformOrigin: "200% 200%", ease: Linear.easeNone, repeat: -1 }, 'circle');
+    
+    rings
+        .from('#svg--format--ring--one', 1.5, { scale: 0, opacity: 0, transformOrigin: "50% 50%", ease: Sine.easeOut }, 'ring')
+        .from('#svg--format--ring--two', 1.5, { scale: 0, opacity: 0, transformOrigin: "50% 50%", ease: Sine.easeOut }, 'ring' + '+=.35')
+        .from('#svg--format--ring--three', 2, { scale: 0, opacity: 0, transformOrigin: "50% 50%", ease: Sine.easeOut }, 'ring' + '+=.75')
+        .from('#svg--format--ring--four', 1.5, { scale: 0, opacity: 0, transformOrigin: "50% 50%", ease: Sine.easeOut }, 'ring' + '+=.5')
+        .staggerTo(ringsStack, .75, { y: 10, opacity: 0, ease: Sine.easeIn }, .25);
+
+
+    svgMasterTml
+        .add(circles, 'masterTime')
+        .add(rings, 'masterTime');
+
+
+    return svgMasterTml
+};
+
+export { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat };
