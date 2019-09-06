@@ -253,4 +253,25 @@ function svgFormat() {
     return svgMasterTml
 };
 
-export { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat };
+function svgPrinting() {
+
+    const svgMasterTml = new TimelineMax({ paused: true });
+    const paper = new TimelineMax({ repeat: -1 });
+    // const cloud = new TimelineMax({});
+
+    paper
+        .to('#svg--printing__card--one', 4.5, { scaleY: 0, transformOrigin: "50% 100%", ease: Sine.easeInOut }, 'print')
+        .from('#svg--printing__card--two', 4.5, { scaleY: 0, transformOrigin: "50% 0%", ease: Sine.easeInOut }, 'print')
+        .to('#svg--printing__card--one', .75, { opacity: 0, ease: Sine.easeInOut }, 'print' + '+=4')
+        .to('#svg--printing__card--two', .75, { opacity: 0, ease: Sine.easeInOut }, 'print' + '+=4');
+
+    svgMasterTml
+        .add(paper, 'masterTime')
+        .to('#svg--printing__leaf', 3, { rotation: 15, transformOrigin: "20% 100%", ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'masterTime')
+        .to('#svg--printing__printer__btn--green', 1.25, { opacity: 0, ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'masterTime')
+        .to('#svg--printing__bg', 3, { skewX: 3, ease: Sine.easeInOut, repeat: -1, yoyo: true}, 'masterTime');
+       
+    return svgMasterTml;
+};
+
+export { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat, svgPrinting };

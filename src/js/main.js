@@ -1,5 +1,5 @@
 import '../sass/styles.scss';
-import { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat } from './svg-animation';
+import { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat, svgPrinting } from './svg-animation';
 // import fslightbox from 'fslightbox';
 import TweenMax from 'gsap';
 
@@ -41,23 +41,25 @@ function toggleMenuClass() {
 
 // Animation functions
 
-const svgMainAnim = svgMain();
-const svgTeamAnim = svgTeam();
-const svgContactAnim = svgContact();
+// const svgMainAnim = svgMain();
+// const svgTeamAnim = svgTeam();
+// const svgContactAnim = svgContact();
 const svgOfferAnim = svgOffer();
 const svgProjectAnim = svgProject();
 const svgFormatAnim = svgFormat();
+const svgPrintingAnim = svgPrinting();
 
-svgMainAnim.play();
-svgTeamAnim.play();
-svgContactAnim.play();
+// svgMainAnim.play();
+// svgTeamAnim.play();
+// svgContactAnim.play();
 svgOfferAnim.play();
 svgProjectAnim.play();
 svgFormatAnim.play();
+svgPrintingAnim.play();
 
 
 
-console.log(svgMainAnim);
+// console.log(svgMainAnim);
 
 
 
