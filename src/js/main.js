@@ -1,5 +1,5 @@
 import '../sass/styles.scss';
-import { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat, svgPrinting } from './svg-animation';
+import { svgMain, svgTeam, svgContact, svgOffer, svgProject, svgFormat, svgPrinting, svgOutdoor, svgInternet, svgGadgets, svgPortfolio, svgContactPage } from './svg-animation';
 // import fslightbox from 'fslightbox';
 import TweenMax from 'gsap';
 
@@ -39,23 +39,36 @@ function toggleMenuClass() {
     menu.classList.toggle('menu--active');
 }
 
-// Animation functions
+// Animation functions declarations
 
 // const svgMainAnim = svgMain();
 // const svgTeamAnim = svgTeam();
 // const svgContactAnim = svgContact();
-const svgOfferAnim = svgOffer();
-const svgProjectAnim = svgProject();
-const svgFormatAnim = svgFormat();
-const svgPrintingAnim = svgPrinting();
+// const svgOfferAnim = svgOffer();
+// const svgProjectAnim = svgProject();
+// const svgFormatAnim = svgFormat();
+// const svgPrintingAnim = svgPrinting();
+// const svgOutdoorAnim = svgOutdoor();
+// const svgInternetAnim = svgInternet();
+// const svgGadgetsAnim = svgGadgets();
+const svgPortfolioAnim = svgPortfolio();
+const svgContactPageAnim = svgContactPage();
+
+// ============== PLAY TRIGGER =================
 
 // svgMainAnim.play();
 // svgTeamAnim.play();
 // svgContactAnim.play();
-svgOfferAnim.play();
-svgProjectAnim.play();
-svgFormatAnim.play();
-svgPrintingAnim.play();
+
+// svgOfferAnim.play();
+// svgProjectAnim.play();
+// svgFormatAnim.play();
+// svgPrintingAnim.play();
+// svgOutdoorAnim.play();
+// svgInternetAnim.play();
+// svgGadgetsAnim.play();
+svgPortfolioAnim.play();
+svgContactPageAnim.play();
 
 
 
