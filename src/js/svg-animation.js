@@ -4,7 +4,7 @@ import { TweenMax, Sine } from 'gsap';
 
 function svgMain() {
 
-    const svgMainTml = new TimelineMax({ paused: true });
+    const svgMasterTml = new TimelineMax({ paused: true });
     const leafTimeLine = new TimelineMax({});
     const circleTimeLine = new TimelineMax({});
     const squareTimeLine = new TimelineMax({});
@@ -33,16 +33,15 @@ function svgMain() {
         .to('.svg--main__bg__rect', 2, { rotation: 5, scale: .95, transformOrigin: "50% 50%", repeat: -1, yoyo: true }, 'square')
         .to('.svg--main__items__rect', 20, { rotation: 360, transformOrigin: '50% 50%', repeat: -1 }, 'square');
 
-    svgMainTml
+    svgMasterTml
         .to('.svg--main__woman__check', 2.25, { rotation: -45, scale: .8, transformOrigin: "50% 50%", repeat: -1, yoyo: true, ease: Sine.easeInOut }, 'masterTime')
-        // LEAFS
         .add(leafTimeLine, 'masterTime')
         .to('.svg--main__flower', 3, { rotation: 5, transformOrigin: "70% 100%", ease: Back.easeInOut.config(2), yoyo: true, repeat: -1 }, 'masterTime')
         .add(circleTimeLine, 'masterTime')
         .add(squareTimeLine, 'masterTime')
         .to('.svg--main__woman__hair', 2, { rotation: -20, transformOrigin: "80% 80%", repeat: -1, ease: Back.easeInOut.config(1.7), yoyo: true }, 'masterTime');
 
-    return svgMainTml;
+    return svgMasterTml;
 };
 
 // SVG OUR TEAM
@@ -157,26 +156,21 @@ function svgOffer() {
             attr: {
                 d: "M566,367.4c-23.7,62.9-83.9,87.2-109.3,126.2C410.9,564,387.5,618,313.3,620 c-79.1,2.2-179.2-43.6-234.3-104C37,470,103,431.9,79,374.3c-55.3-133,3.7-245.8,143.2-245.8S615.1,236.8,566,367.4z"
             }, repeat: -1, yoyo: true, ease: Sine.easeInOut
-        }, 'masterTime')
-        
-
-
-
+        }, 'masterTime');
 
     return svgMasterTml;
 };
 
 function svgProject() {
 
-    const svgMasterTml = new TimelineMax({ paused: true });
+    const svgProjectTml = new TimelineMax({ paused: true });
     const chatOne = new TimelineMax({});
     const chatTwo = new TimelineMax({});
     const chatThree = new TimelineMax({});
     const chatMaster = new TimelineMax({ repeat: -1 });
     const palette = new TimelineMax({ repeat: -1 });
-
+    
     const paletteColors = Array.from(document.querySelectorAll('.svg--project--palette__color'));
-    const palleteStuff = [...paletteColors, document.getElementById('svg--project--palette--main')]
 
     chatOne
         .from('#svg--project--chat--one__avatar', .75, { scale: 0, transformOrigin: "50% 50%", ease: Sine.easeOut }, 'chat')
@@ -205,11 +199,11 @@ function svgProject() {
     palette
         .from('#svg--project--palette--main', 2, { scale: 0, rotation: 360, ease: Sine.easeOut, transformOrigin: "50% 50%" }, 'palette')
         .staggerFrom(paletteColors, .5, { y: 10, opacity: 0, delay: .75, ease: Sine.easeOut }, .25, 'palette')
-        .staggerTo(palleteStuff, .75, { y: -10, opacity: 0, ease: Sine.easeIn });
+        .staggerTo(paletteColors, .75, { y: -20, opacity: 0, ease: Sine.easeIn }, 'paletteFade')
+        .to('#svg--project--palette--main', 2, { y: -20, opacity: 0, ease: Sine.easeIn }, 'paletteFade');
 
 
-
-    svgMasterTml
+    svgProjectTml
         .add(chatMaster, 'masterTime')
         .add(palette, 'masterTime')
         .to('#svg--project--bgcircle--one', 5.5, { rotation: 360, transformOrigin: "53% 50%", ease: Sine.easeInOut, repeat: -1 }, 'masterTime')
@@ -217,9 +211,9 @@ function svgProject() {
         .to('#svg--project__tree--one', 2, { rotation: 10, transformOrigin: "50% 100%", ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'masterTime')
         .to('#svg--project__tree--two', 2.5, { rotation: -13, transformOrigin: "50% 100%", ease: Sine.easeInOut, repeat: -1, yoyo: true }, 'masterTime');
 
-    svgMasterTml.timeScale(.8);
+    svgProjectTml.timeScale(.8);
 
-    return svgMasterTml
+    return svgProjectTml
 };
 
 function svgFormat() {
@@ -393,7 +387,7 @@ function svgPortfolio() {
         .to('#svg--portfolio__palette', .85, {opacity: 0, delay: .5, ease: Sine.easeIn});
 
     cards
-        .from('#svg--portfolio__card--one', 3, { rotation: -3, transformOrigin: "100% 85%", ease: Sine.easeInOut}, 'card')
+        .from('#svg--portfolio__card--one', 3, { rotation: -5, transformOrigin: "30% 85%", ease: Sine.easeInOut}, 'card')
         .from('#svg--portfolio__card--two', 3, { rotation: 8, transformOrigin: "50% 50%", ease: Sine.easeInOut}, 'card')
 
     circles

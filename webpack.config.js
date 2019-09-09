@@ -28,8 +28,8 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            // loader: MiniCssExtractPlugin.loader
-            loader: "style-loader"
+            loader: MiniCssExtractPlugin.loader
+            // loader: "style-loader"
           },
           {
             loader: "css-loader"
@@ -103,5 +103,5 @@ module.exports = {
   // Depending on mode Webpack will apply different things
   // on final bundle. For now we don't need production's JavaScript
   // minifying and other thing so let's set mode to development
-  mode: "development"
+  mode: "production"
 };

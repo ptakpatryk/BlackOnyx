@@ -11,18 +11,9 @@ const menuAnimation = TweenMax.to('#coral-line', 2, {
     },
     repeat: -1,
     yoyo: true,
-    ease: Sine.easeInOut
+    ease: Sine.easeInOut,
+    paused: true
 });
-
-// menuAnimation();
-
-// TweenMax.to('#Path_34', 1, {
-//     css:{scale:0.9, rotation: 15, transformOrigin: '50% 50%'},
-//     repeat: -1,
-//     yoyo: true,
-//     ease: Sine.easeInOut
-// })
-
 
 // MENU TOGGLE
 
@@ -39,67 +30,50 @@ function toggleMenuClass() {
     menu.classList.toggle('menu--active');
 }
 
+
+
 // Animation functions declarations
 
-// const svgMainAnim = svgMain();
-// const svgTeamAnim = svgTeam();
-// const svgContactAnim = svgContact();
-// const svgOfferAnim = svgOffer();
-// const svgProjectAnim = svgProject();
-// const svgFormatAnim = svgFormat();
-// const svgPrintingAnim = svgPrinting();
-// const svgOutdoorAnim = svgOutdoor();
-// const svgInternetAnim = svgInternet();
-// const svgGadgetsAnim = svgGadgets();
+const svgMainAnim = svgMain();
+const svgTeamAnim = svgTeam();
+const svgContactAnim = svgContact();
+const svgOfferAnim = svgOffer();
+
+const svgProjectAnim = svgProject();
+const svgFormatAnim = svgFormat();
+const svgPrintingAnim = svgPrinting();
+const svgOutdoorAnim = svgOutdoor();
+const svgInternetAnim = svgInternet();
+const svgGadgetsAnim = svgGadgets();
 const svgPortfolioAnim = svgPortfolio();
 const svgContactPageAnim = svgContactPage();
 
-// ============== PLAY TRIGGER =================
 
-// svgMainAnim.play();
-// svgTeamAnim.play();
-// svgContactAnim.play();
+// Animation intersection observer
 
-// svgOfferAnim.play();
-// svgProjectAnim.play();
-// svgFormatAnim.play();
-// svgPrintingAnim.play();
-// svgOutdoorAnim.play();
-// svgInternetAnim.play();
-// svgGadgetsAnim.play();
-svgPortfolioAnim.play();
-svgContactPageAnim.play();
+const animSvgs = Array.from(document.querySelectorAll('.svg--animation'));
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2
+}
+
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            eval(entry.target.dataset.animation).play();
+        } else if (!entry.isIntersecting) {
+            eval(entry.target.dataset.animation).pause();
+        }
+    })
+}
+
+const observer = new IntersectionObserver(callback, options);
 
 
-
-// console.log(svgMainAnim);
-
-
-
-// // Poligrafia intersection observer
-
-// const poligrafiaTarget = document.getElementById('poligrafia');
-// const outdoor = document.getElementById('outdoor');
-
-// const options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 0.05
-// }
-
-// const callback = (entries, observer) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             console.log(entry.target.id)
-//         } else if (!entry.isIntersecting) {
-//             console.log(`I'm hidden right now!`)
-//         }
-//     })
-// }
-
-// const observer = new IntersectionObserver(callback, options);
-
-// observer.observe(poligrafiaTarget);
-// observer.observe(outdoor);
+animSvgs.forEach(el => {
+    observer.observe(el);
+})
 
 
