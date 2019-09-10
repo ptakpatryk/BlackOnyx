@@ -30,8 +30,6 @@ function toggleMenuClass() {
     menu.classList.toggle('menu--active');
 }
 
-
-
 // Animation functions declarations
 
 const svgMainAnim = svgMain();

@@ -28,9 +28,17 @@ body {
   flex-direction: column;
 }
 
+.mobile-break {
+  display: none;
+}
+
 #logo {
   width: 20vw;
   margin-right: auto;
+}
+
+.btn-go-up {
+  display: none;
 }
 
 .top {
@@ -79,10 +87,12 @@ nav {
         // font-size: calc(.4rem - (-1vw));
       }
 
-      :hover {
+      :hover,
+      :focus    {
         background: #fff;
         color: $coral;
         border-radius: 3px;
+        outline: none;
       }
     }
   }
@@ -226,9 +236,11 @@ header {
     color: #fff;
     margin-right: 1rem;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: lighten($coral, 5%);
       transform: scale(1.04);
+      outline: none;
     }
   }
 
@@ -237,11 +249,13 @@ header {
     box-shadow: 0px 0px 0px 2px $coral inset;
     background: #fff;
     color: $coral;
-
-    &:hover {
+        
+    &:hover,
+    &:focus {
       box-shadow: 0px 0px 0px 2px lighten($coral, 10%) inset;
       color: lighten($coral, 10%);
       transform: scale(1.04);
+      outline: none;
     }
   }
 }
@@ -268,6 +282,12 @@ header {
 
   a {
     text-decoration: none;
+    color: $coral;
+  }
+
+  a:hover,
+  a:focus {
+    color: $coral-light;
   }
 
   strong {
@@ -348,10 +368,12 @@ footer {
           margin-left: 0.3rem;
         }
       }
-      a:hover {
+      a:hover,
+      a:focus {
         path {
           fill: #fff;
         }
+        outline: none;
       }
     }
 
@@ -401,9 +423,11 @@ footer {
           font-size: $normal;
           color: $coral-light;
 
-          &:hover {
+          & a:hover,
+          & a:focus {
             color: #fff;
             font-weight: 700;
+            outline: none;
           }
         }
       }
